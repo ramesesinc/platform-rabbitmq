@@ -1,0 +1,2 @@
+com.rameses.rabbitmq.RabbitMQConnectionProvider
+com.rameses.rabbitmq.RabbitMQGoConnectionProvider
