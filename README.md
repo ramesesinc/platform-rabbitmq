@@ -1,0 +1,2 @@
+# platform-rabbitmq
+Platform - rabbitmq
