@@ -216,8 +216,9 @@ public class RabbitMQGoConnectionPool extends MessageConnection
                 
                 pushToCache( tokenid, result.toString() ); 
                 
-                Object golangHost = appConf.get("golang.host");                 
+                Object golangHost = appConf.get("golang.host");   
                 HttpClient httpc = new HttpClient( golangHost.toString());
+                httpc.setDebug( "true".equals(appConf.get("debug")+""));
                 System.out.println("[golang] post result to "+ tokenid);
                 httpc.post("gdx-notifier/publish/"+ tokenid, wsreply.toString()); 
             } catch(Throwable t) { 
